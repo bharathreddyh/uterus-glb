@@ -10,7 +10,7 @@ services:
       - ./data:/app/data
     environment:
       - DATA_DIR=/app/data
-      - DICOM_AE_TITLE=UTERUS_GLB
+      - DICOM_AE_TITLE=IHA_CARE
       - DICOM_PORT=11112
       - HOST=0.0.0.0
       - PORT=8000

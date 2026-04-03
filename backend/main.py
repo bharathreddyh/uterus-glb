@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 DATA_DIR = os.environ.get("DATA_DIR", "./data")
-DICOM_AE_TITLE = os.environ.get("DICOM_AE_TITLE", "UTERUS_GLB")
+DICOM_AE_TITLE = os.environ.get("DICOM_AE_TITLE", "IHA_CARE")
 DICOM_PORT = int(os.environ.get("DICOM_PORT", "11112"))
 HOST = os.environ.get("HOST", "0.0.0.0")
 PORT = int(os.environ.get("PORT", "8000"))
@@ -80,7 +80,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Uterus GLB — USG Typist",
+    title="IHA Care — USG Typist",
     version="1.0.0",
     lifespan=lifespan,
 )

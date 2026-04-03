@@ -1,4 +1,4 @@
-# Uterus GLB — USG Typist
+# IHA Care — USG Typist
 
 A complete DICOM receiver and obstetric ultrasound reporting web application.
 
@@ -19,7 +19,7 @@ On the Samsung V6 ultrasound machine, configure the DICOM Store destination:
 
 | Setting | Value |
 |---------|-------|
-| AE Title (Remote) | `UTERUS_GLB` |
+| AE Title (Remote) | `IHA_CARE` |
 | Remote IP | `<PC_IP_ADDRESS>` (see §2) |
 | Remote Port | `11112` |
 | Transfer Syntax | Explicit VR Little Endian |
@@ -28,7 +28,7 @@ Steps on the Samsung V6:
 1. Go to **Setup → DICOM → Storage SCU**
 2. Add a new DICOM destination
 3. Enter the IP address of the PC running this application
-4. Set Port to `11112` and AE Title to `UTERUS_GLB`
+4. Set Port to `11112` and AE Title to `IHA_CARE`
 5. Run a **C-ECHO (Ping)** test to verify connectivity before sending images
 
 ---
@@ -71,7 +71,7 @@ netsh advfirewall firewall add rule name="DICOM" dir=in action=allow protocol=TC
 
 ```bash
 # Clone / navigate to project
-cd /path/to/uterus-glb
+cd /path/to/iha-care
 
 # Build and start all services
 docker compose up -d --build
@@ -217,7 +217,7 @@ rm ./data/uterus.db
 ## Directory Structure
 
 ```
-uterus-glb/
+iha-care/
 ├── backend/
 │   ├── main.py              # FastAPI app, startup/shutdown, SSE
 │   ├── dicom_receiver.py    # pynetdicom SCP, thumbnail generation

@@ -84,7 +84,7 @@ export default function StudyList({ selectedUid, onSelect, onDeleted, refreshTic
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-logo">Uterus GLB</div>
+        <div className="sidebar-logo">IHA Care</div>
         <div className="sidebar-subtitle">USG Typist</div>
         <div className="sidebar-status">
           <span className={`status-dot ${dicomOnline ? 'online' : 'offline'}`} />

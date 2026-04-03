@@ -90,7 +90,7 @@ def _generate_thumbnail(ds, thumbnail_path: str) -> bool:
 
 
 class DICOMReceiver:
-    def __init__(self, store, data_dir: str, ae_title: str = "UTERUS_GLB",
+    def __init__(self, store, data_dir: str, ae_title: str = "IHA_CARE",
                  port: int = 11112, event_queue: queue.Queue = None):
         self.store = store
         self.data_dir = data_dir

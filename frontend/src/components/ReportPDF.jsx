@@ -50,12 +50,12 @@ export async function generate(study, report, imageDataUrl = null) {
   doc.setTextColor(255, 255, 255)
   doc.setFontSize(16)
   doc.setFont('helvetica', 'bold')
-  doc.text('UTERUS GLB ULTRASOUND CENTER', pageW / 2, 11, { align: 'center' })
+  doc.text('IHA CARE ULTRASOUND CENTER', pageW / 2, 11, { align: 'center' })
 
   doc.setFontSize(9)
   doc.setFont('helvetica', 'normal')
   doc.text('Obstetric & Gynaecological Ultrasound Services', pageW / 2, 18, { align: 'center' })
-  doc.text('Tel: —   |   Email: —   |   www.utglb.local', pageW / 2, 23, { align: 'center' })
+  doc.text('Tel: —   |   Email: —   |   www.ihacare.local', pageW / 2, 23, { align: 'center' })
 
   y = 34
   doc.setTextColor(0, 0, 0)

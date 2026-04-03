@@ -259,7 +259,7 @@ def create_dicom_dataset(patient: dict, study_uid: str, series_uid: str,
 # ── C-STORE sender ────────────────────────────────────────────────────────
 
 def send_study(patient: dict, num_images: int, host: str, port: int,
-               calling_ae: str = "SIMULATOR", called_ae: str = "UTERUS_GLB",
+               calling_ae: str = "SIMULATOR", called_ae: str = "IHA_CARE",
                save_dir: str = None, save_only: bool = False) -> bool:
     """Create and send one study."""
     from pynetdicom import AE
@@ -342,8 +342,8 @@ def main():
                         help="DICOM receiver host (default: 127.0.0.1)")
     parser.add_argument("--port", type=int, default=11112,
                         help="DICOM receiver port (default: 11112)")
-    parser.add_argument("--called-ae", default="UTERUS_GLB",
-                        help="Called AE title (default: UTERUS_GLB)")
+    parser.add_argument("--called-ae", default="IHA_CARE",
+                        help="Called AE title (default: IHA_CARE)")
     parser.add_argument("--calling-ae", default="SIMULATOR",
                         help="Calling AE title (default: SIMULATOR)")
     parser.add_argument("--studies", type=int, default=1,
